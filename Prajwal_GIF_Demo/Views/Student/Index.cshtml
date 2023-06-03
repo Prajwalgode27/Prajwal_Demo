@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/Student.js"></script>
+
+<h2>StudentList</h2>
+<table id="StudentList" border="1">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Parent Name</th>
+            <th>Student Class</th>
+            <th>Parent Email</th>
+            <th>Parent Mobile</th>
+            <th>Active</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+    </tbody>
+</table>
+<input type="submit" id="updateBtn" value="Update" border="1" />
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin:124px;">
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">ID</label>
+                        <input type="hidden" class="form-control" id="Id" placeholder="Id"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="StudentName">Student Name</label>
+                        <input type="text" class="form-control" id="StudentName" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ParentName">Parent Name</label>
+                        <input type="text" class="form-control" id="ParentName" placeholder="Parent Name" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Class">Class</label>
+                        <select class="form-control" id="ddlClass" name="StudentGender">
+                            <option>Primary</option>
+                            <option>Secondary</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ParentEmail">Parent Email</label>
+                        <input type="text" class="form-control" id="ParentEmail" placeholder="Parent Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ParentMobile">Parent Mobile</label>
+                        <input type="text" class="form-control" id="ParentMobile" placeholder="Parent Mobile" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ParentEmail">Active</label>
+                        <input type="checkbox" id="Active" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="updateStudent();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
